@@ -165,7 +165,14 @@ p {
   }
 }
 /* added during recording */
-
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: var(--clr-primary-5);
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
 =============== 
 Navbar
@@ -312,7 +319,56 @@ Sidebar
 Hero
 ===============
 */
-
+.hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+.hero-img {
+  display: none;
+}
+.hero {
+  background: var(--clr-primary-10);
+}
+.hero-center {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+}
+.hero-info h4 {
+  color: var(--clr-grey-5);
+}
+.hero-icons {
+  justify-items: start;
+}
+.hero-btn {
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 992px) {
+  .hero-img {
+    display: block;
+    position: relative;
+  }
+  .hero-img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 2rem;
+    right: -2rem;
+    border-radius: var(--radius);
+  }
+  .hero-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-photo {
+    min-width: 25rem;
+    min-height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 0.25rem solid var(--clr-primary-5);
+    position: relative;
+  }
+}
 /* underline added to globals */
 
 /*
