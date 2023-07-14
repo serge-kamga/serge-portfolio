@@ -173,6 +173,10 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
 /*
 =============== 
 Navbar
@@ -343,12 +347,21 @@ Hero
 .hero-btn {
   margin-top: 1.25rem;
 }
+.hero-photo {
+  min-width: 25rem;
+  min-height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 0.25rem solid var(--clr-primary-5);
+  position: relative;
+}
 @media screen and (min-width: 992px) {
   .hero-img {
     display: block;
     position: relative;
   }
-  .hero-img::before {
+  .hero-img::before,
+  .about-img::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -360,14 +373,6 @@ Hero
   .hero-center {
     grid-template-columns: 1fr 1fr;
   }
-  .hero-photo {
-    min-width: 25rem;
-    min-height: 30rem;
-    object-fit: cover;
-    border-radius: var(--radius);
-    border: 0.25rem solid var(--clr-primary-5);
-    position: relative;
-  }
 }
 /* underline added to globals */
 
@@ -376,6 +381,34 @@ Hero
 About
 ===============
 */
+.about-title {
+  text-align-last: left;
+  margin-bottom: 2rem;
+}
+.about-title .underline {
+  margin-left: 0;
+}
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  justify-self: center;
+}
+@media screen and(min-width: 992px) {
+  .about-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    left: -2rem;
+  }
+  .about-info {
+    align-self: center;
+  }
+}
 /* section title added to globals */
 
 /*
